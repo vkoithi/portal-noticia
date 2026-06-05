@@ -105,12 +105,12 @@ section header {
     }
 }
 
-#aside {
+aside {
     grid-area: aside;
 }
 
 #more {
-    margin-top: 32px;
+    margin-top: 29px;
 
     h3 {
         margin-top: 8px;
