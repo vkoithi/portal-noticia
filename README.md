@@ -14,7 +14,7 @@ Projeto estático de um portal de notícias construído com HTML e CSS. O layout
 2. Abra o arquivo `index.html` no navegador.
 3. Opcional: use Live Server no VS Code para visualizar localmente.
 
-## Estrutura do pastas
+## Estrutura das pastas
 - `index.html` - Página principal com o markup do portal
 - `styles/` - Pastas com os estilos CSS
 - `global.css` - Estilos base, variáveis e grid geral da página
@@ -24,10 +24,11 @@ Projeto estático de um portal de notícias construído com HTML e CSS. O layout
 - `assets/` - Imagens, ícones e outros recursos visuais utilizados no layout
 
 ## Funcionalidades
-- Cabeçalho com logo e menu
-- Seção de perfil com foto, nome e descrição
-- Informações de localização, países e fotos
-- Galeria de imagens
+- Layout com navegação superior e categorias de notícias
+- Seção de destaque com cartão principal e cards secundários
+- Área "Mais lidas da semana" com cards de notícias recentes
+- Seção de destaques de Inteligência Artificial com artigos e imagens
+- Barra lateral com anúncio e conteúdo complementar de interesse
 
 ## 💻 Projeto
 - [Acesse o projeto finalizado, online.](https://vkoithi.github.io/portal-noticia/)
