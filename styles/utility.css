@@ -34,3 +34,17 @@
     font: var(--text-sm);
 }
 
+@media (width <= 26.5625rem) {
+    
+    .desktop-only {
+        display: none;
+    }
+
+    .gap1-mobile {
+        gap: 1rem;
+    }
+
+    .grid-cols-2 {
+        grid-template-columns: 1fr;  
+    }
+}

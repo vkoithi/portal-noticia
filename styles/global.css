@@ -72,3 +72,18 @@ main {
     color: var(--text-color-primary);
     box-shadow: 0px 4px 16px rgba(2, 6, 23, 0.25)
 }
+
+@media (width <= 26.5625rem) {
+    .container {
+       padding-inline: 1rem;
+    }
+
+    main {
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "featured"
+        "weekly"
+        "ai"
+        "aside";
+    }
+}

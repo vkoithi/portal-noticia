@@ -22,3 +22,11 @@
     border-inline: none;
     justify-content: space-between;
 }
+
+@media (width <= 26.5625rem) {
+
+    #secondary {
+        padding-inline: 1rem;
+        gap:1rem;
+    }
+}

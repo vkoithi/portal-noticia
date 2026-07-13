@@ -63,7 +63,8 @@ section header {
 }
 
 #weekly {
-
+    overflow: auto;
+    margin-inline: 0;
     grid-area: weekly;
     
     &>div {
@@ -81,12 +82,12 @@ section header {
         position: absolute;
         top: 8px;
         left: 8px;
-       }
+        }
 
-    p {
-      margin-top: 8px;
-      font-weight: 800;  
-    }   
+        p {
+        margin-top: 8px;
+        font-weight: 800;  
+        }   
     }
 }
 
@@ -123,5 +124,25 @@ aside {
     }
 }
 
+@media (width <= 26.5625rem) {
+    #featured {
+        grid-auto-flow: row;
+        grid-template-columns: 1fr;
+
+        & > div {
+            grid-template-columns: 1fr;
+        }
+
+        & img {
+            width: 100%;
+        }
+    }
+    
+    #weekly {
+        & > div {
+            grid-template-columns: 1fr;
+        }
+    }
+}
 
 
