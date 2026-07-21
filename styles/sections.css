@@ -49,18 +49,36 @@ section header {
     }
 
     figcaption {
-        position: absolute;
-        bottom: 0;
-        padding: 24px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
 
-        &:has(.text-lg) {
-            padding: 12px;
-        }
+    width: 100%;
+    min-width: 0;
+    padding: 24px;
+
+    h2 {
+        margin-top: 8px;
+
+        display: -webkit-box;
+        overflow: hidden;
+        text-overflow: ellipsis;
+
+        line-clamp: 3;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+    }
+
+    &:has(.text-lg) {
+        padding: 12px;
 
         h2 {
-            margin-top: 8px;
+            line-clamp: 2;
+            -webkit-line-clamp: 2;
         }
     }
+}
 }
 
 #weekly {
@@ -96,9 +114,21 @@ section header {
 #ai {
     grid-area: ai;
 
+    article {
+        grid-template-columns: minmax(0, 1fr) 144px;
+        align-items: center;
+        gap: 16px;
+    }
+
+    article > div:last-child {
+        width: 144px;
+        height: 144px;
+        align-self: center;
+    }
+
     img {
-        width: 176px;
-        aspect-ratio: 1 / 1;
+        width: 100%;
+        height: 100%;
         object-fit: cover;
     }
 
@@ -136,5 +166,45 @@ aside {
 
     #weekly > div {
         grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 33rem) {
+    #ai article {
+        grid-template-columns: minmax(0, 1fr) 80px;
+        align-items: center;
+        gap: 16px;
+    }
+
+    #ai article + article {
+        margin-top: 32px;
+    }
+
+    #ai article > div:last-child {
+        width: 80px;
+        height: 80px;
+    }
+
+    #ai article > div:last-child img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    #ai h3,
+    #ai p {
+        display: -webkit-box;
+        overflow: hidden;
+        -webkit-box-orient: vertical;
+    }
+
+    #ai h3 {
+        line-clamp: 2;
+        -webkit-line-clamp: 2;
+    }
+
+    #ai p {
+        line-clamp: 2;
+        -webkit-line-clamp: 2;
     }
 }
