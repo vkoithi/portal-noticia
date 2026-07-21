@@ -25,32 +25,30 @@
     justify-content: space-between;
 }
 
-/* Tablet */
 @media (max-width: 52rem) {
-    #secondary {
-        justify-content: start;
-        gap: 2rem;
+  #secondary {
+    justify-content: start;
+    grid-auto-columns: max-content;
+    gap: 2rem;
+    overflow-x: auto;
+    scrollbar-width: none;
 
-        overflow-x: auto;
-        scrollbar-width: none;
-
-        a {
-            white-space: nowrap;
-        }
+    a {
+      white-space: nowrap;
     }
+  }
 
-    #secondary::-webkit-scrollbar {
-        display: none;
-    }
+  #secondary::-webkit-scrollbar {
+    display: none;
+  }
 }
 
-/* Celular */
 @media (max-width: 33rem) {
-    #primary {
-        padding-block: 16px;
-    }
+  #primary {
+    padding-block: 16px;
+  }
 
-    #secondary {
-        gap: 1rem;
-    }
+  #secondary {
+    gap: 1rem;
+  }
 }
