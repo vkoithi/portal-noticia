@@ -18,15 +18,39 @@
 
 #secondary {
     padding-block: 14px;
-    border: solid 1px var(--stroke-color);
+
+    border: 1px solid var(--stroke-color);
     border-inline: none;
+
     justify-content: space-between;
 }
 
-@media (width <= 26.5625rem) {
+/* Tablet */
+@media (max-width: 52rem) {
+    #secondary {
+        justify-content: start;
+        gap: 2rem;
+
+        overflow-x: auto;
+        scrollbar-width: none;
+
+        a {
+            white-space: nowrap;
+        }
+    }
+
+    #secondary::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+/* Celular */
+@media (max-width: 33rem) {
+    #primary {
+        padding-block: 16px;
+    }
 
     #secondary {
-        padding-inline: 1rem;
-        gap:1rem;
+        gap: 1rem;
     }
 }

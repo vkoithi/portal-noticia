@@ -9,53 +9,54 @@ section header {
         gap: 8px;
 
         span {
-            background-image: url(../assets/Icons/ArrowRight.svg);
-            height: 16px;
+            background-image: url("../assets/Icons/ArrowRight.svg");
             width: 16px;
+            height: 16px;
         }
 
         &:hover span {
-            background-image: url(../assets/Icons/ArrowRightHover.svg);
+            background-image: url("../assets/Icons/ArrowRightHover.svg");
         }
     }
 }
-
 
 #featured {
     grid-area: featured;
 
     img {
+        width: 100%;
         height: 100%;
         object-fit: cover;
     }
 }
 
 .card {
+    position: relative;
     border-radius: 4px;
     overflow: hidden;
-    position: relative;  
 
     &::before {
         content: "";
         position: absolute;
         inset: 0;
-        top:50%;
-        background-color: linear-gradient(
-         180deg,
-         transparent 0%,
-         #020617 100%      
+        top: 50%;
+
+        background: linear-gradient(
+            180deg,
+            transparent 0%,
+            #020617 100%
         );
-    }  
+    }
 
     figcaption {
         position: absolute;
         bottom: 0;
         padding: 24px;
 
-        &:has(.text-lg){
+        &:has(.text-lg) {
             padding: 12px;
         }
-        
+
         h2 {
             margin-top: 8px;
         }
@@ -63,41 +64,41 @@ section header {
 }
 
 #weekly {
-    overflow: auto;
-    margin-inline: 0;
     grid-area: weekly;
-    
-    &>div {
-        grid-template-columns: repeat(4, 292px);
+    margin-inline: 0;
+
+    & > div {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
     }
 
     img {
+        width: 100%;
         height: 160px;
+        object-fit: cover;
     }
 
     figure {
-       position: relative; 
+        position: relative;
 
-       .content-tag{
-        position: absolute;
-        top: 8px;
-        left: 8px;
+        .content-tag {
+            position: absolute;
+            top: 8px;
+            left: 8px;
         }
 
         p {
-        margin-top: 8px;
-        font-weight: 800;  
-        }   
+            margin-top: 8px;
+            font-weight: 800;
+        }
     }
 }
 
 #ai {
-
     grid-area: ai;
 
     img {
         width: 176px;
-        aspect-ratio: 1/1;
+        aspect-ratio: 1 / 1;
         object-fit: cover;
     }
 
@@ -119,103 +120,21 @@ aside {
 
     img {
         width: 72px;
-        aspect-ratio: 1/1;
+        aspect-ratio: 1 / 1;
         object-fit: cover;
     }
 }
 
-@media (width <= 26.5625rem) {
+@media (max-width: 62rem) {
     #featured {
         grid-auto-flow: row;
-        grid-template-columns: 1fr;
-
-        & > div {
-            grid-template-columns: 1fr;
-        }
-
-        & > .card {
-            width: 100%;
-            height: 416px;
-        }
-
-        & > div .card {
-            width: 100%;
-            height: 200px;
-        }
-
-        & > .card h2 {
-            display: -webkit-box;
-            -webkit-line-clamp: 3;
-            line-clamp: 3;
-            -webkit-box-orient: vertical;
-            overflow: hidden;
-        }
-
-        & > div .card h2 {
-            display: -webkit-box;
-            -webkit-line-clamp: 2;
-            line-clamp: 2;
-            -webkit-box-orient: vertical;
-            overflow: hidden;
-        }
-
-        & img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
     }
 
-    #weekly {
-        & > div {
-            grid-template-columns: 1fr;
-        }
+    #featured > div {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
-    #ai article{
-        grid-template-columns: 100px 1fr;
-        align-items: center;
-        margin-bottom: 0;
-
-        & h3, 
-        & p {
-            display: -webkit-box;
-            -webkit-line-clamp: 2;
-            line-clamp: 2;
-            -webkit-box-orient: vertical;
-            overflow: hidden;
-        }
-
-        & img {
-            width: 100px;
-            height: 100px;
-        }
-
-        & > div:first-child {
-            order: 1;
-        }
-
-        & > div:last-child {
-            order: 0;
-        }
-    }
-
-    #ads {
-        & img {
-            border-radius: 5px;
-        }
-    }
-
-    #more {
-        margin-top: 4rem;
-
-        & h3 {
-             display: -webkit-box;
-            -webkit-line-clamp: 2;
-            line-clamp: 2;
-            -webkit-box-orient: vertical;
-            overflow: hidden;    
-        }
+    #weekly > div {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 }
-
